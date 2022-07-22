@@ -8,6 +8,8 @@ public class ex2_1 {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("a,b를 입력해주세요");
+
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		
