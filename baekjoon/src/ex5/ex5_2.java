@@ -2,23 +2,40 @@ package ex5;
 
 public class ex5_2 {
 
-	int DR(int n) {
+	public static void main(String[] args) {
+		 
+		boolean[] check = new boolean[10001];	
 		
-		int dn=0;
 		
-		while(true) {
-			
-			n = n+(n/10)+(n%10);
-			
-			
-			if(dn<10000 && dn>9990) {
-				break;
+		for(int i=1; i<10001; i++){
+			int n = d(i);
+		
+			if(n<10001){	
+				check[n] = true;
 			}
 		}
-		
-		
-		return dn;
-		
+ 
+		StringBuilder st = new StringBuilder();
+        
+		for (int i=1; i<10001; i++) {
+			if (!check[i]) {	
+				st.append(i).append('\n');
+			}
+		}
+		System.out.println(st);
+	}
+ 
+ 
+ 
+	public static int d(int number){
+		int sum = number;
+    
+		while(number != 0){
+			sum = sum + (number%10);	
+			number = number/10;
+		}
+    
+		return sum;
 	}
 	
 }
