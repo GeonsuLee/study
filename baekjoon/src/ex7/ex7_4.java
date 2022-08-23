@@ -12,11 +12,33 @@ public class ex7_4 {
 		
 		
 		String[] abv = br.readLine().split(" ");
-		int a = Integer.parseInt(abv[0]);
-		int b = Integer.parseInt(abv[1]);
+//		if (abv.length > 6) {
+//			while(true) {
+//				System.out.println("숫자 3개만 입력하세요");
+//			}
+//		}
+		int up = Integer.parseInt(abv[0]);
+		int down = Integer.parseInt(abv[1]);
 		int v = Integer.parseInt(abv[2]);
 		
 		
+		int upday = up-down;
+		int day = 0;
+		int sum=0;
+		
+		while(sum<v) {
+			
+			sum+=upday;
+			
+			if(sum==v) {
+				break;
+			}
+			
+			day++;
+		}
+		
+		
+		System.out.println(day);
 		
 	}
 
